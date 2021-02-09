@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className="py-3">
+    <header className="py-3 mx-5">
       <h1 className="text-5xl font-bold py-3">Application UI</h1>
       <p className="text-gray-600">
         Hi guys, I decided to create different user interfaces <br />
