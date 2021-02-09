@@ -10,6 +10,8 @@ const Header = () => {
         <a
           className="font-semibold text-indigo-500 border-b hover:border-indigo-300"
           href="https://reactjs.org"
+          target="_blank"
+          rel="noreferrer"
         >
           React
         </a>
