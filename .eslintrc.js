@@ -12,8 +12,5 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react'],
-  rules: {
-    quotes: ['error', 'double']
-  }
+  plugins: ['react']
 }
