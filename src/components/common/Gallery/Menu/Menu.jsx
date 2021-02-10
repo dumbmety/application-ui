@@ -1,11 +1,15 @@
 import React from 'react'
 
 import FeedbackButton from './FeedbackButton'
+import ThemeButton from './ThemeButton'
 
 const Menu = () => {
   return (
-    <header>
+    <header className="flex items-center justify-between">
       <FeedbackButton />
+      <div>
+        <ThemeButton />
+      </div>
     </header>
   )
 }

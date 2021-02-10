@@ -4,7 +4,7 @@ const FeedbackButton = () => {
   return (
     <button
       disabled
-      className="text-gray-500 hover:opacity-75 flex items-center py-1 px-2 rounded select-none cursor-not-allowed focus:outline-none"
+      className="text-gray-500 dark:text-gray-300 hover:opacity-75 flex items-center py-1 px-2 rounded select-none cursor-not-allowed focus:outline-none"
     >
       <svg
         className="w-5 h-5 mr-1"
