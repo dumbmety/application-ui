@@ -1,4 +1,4 @@
-[
+export const COMPONENTS = [
   {
     "id": "1af29375-f3a4-4f51-b3db-8ee3ea0ddf24",
     "imgAlt": "navigation navbars",
@@ -56,3 +56,4 @@
     "route": "/select-menu"
   }
 ]
+
