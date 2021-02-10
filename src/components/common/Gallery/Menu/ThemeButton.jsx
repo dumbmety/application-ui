@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import changeTheme from '../../../../helpers/changeTheme'
 
 const ThemeButton = () => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState(localStorage.theme || 'light')
 
   const handleChangeTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
