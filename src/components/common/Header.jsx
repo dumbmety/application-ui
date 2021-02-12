@@ -10,7 +10,7 @@ const Header = () => {
         Hi guys, I decided to create different user interfaces <br />
         to learn better{' '}
         <a
-          className="font-semibold text-indigo-500 dark:text-indigo-400 border-b dark:border-gray-400 dark:hover:border-indigo-400 hover:border-indigo-300"
+          className="font-semibold text-indigo-500 dark:text-indigo-400 border-b dark:border-gray-700 dark:hover:border-indigo-400 hover:border-indigo-300"
           href="https://reactjs.org"
           target="_blank"
           rel="noreferrer"
