@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const Component = ({ imgAlt, imgUrl, isActive, name, route }) => {
   const wrapperClasses = isActive
@@ -10,7 +11,7 @@ const Component = ({ imgAlt, imgUrl, isActive, name, route }) => {
     <li
       className={`bg-white dark:bg-gray-800 dark:text-gray-200 focus:bg-gray-50 dark:focus:bg-gray-700 rounded overflow-hidden cursor-pointer ${wrapperClasses}`}
     >
-      <a href={isActive ? route : null}>
+      <Link to={isActive && route}>
         <figure>
           <img
             className="w-full border-b border-gray-200 dark:border-gray-800"
@@ -18,8 +19,8 @@ const Component = ({ imgAlt, imgUrl, isActive, name, route }) => {
             alt={imgAlt}
           />
         </figure>
-        <figcaption className="py-2 px-4">{name}</figcaption>
-      </a>
+        <figcaption className="px-4 py-2">{name}</figcaption>
+      </Link>
     </li>
   )
 }

@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
 
-import Header from '../components/common/Header'
-import Gallery from '../components/common/Gallery/Gallery'
+import Home from '../components/Home'
+import Navbar from '../components/Elements/Navbar'
 
 import changeTheme from '../helpers/changeTheme'
 
@@ -13,10 +14,12 @@ const App = () => {
 
   return (
     <SimpleBar className="h-screen">
-      <div className="container mx-auto py-12 text-gray-800">
-        <Header />
-        <Gallery />
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/navbar" component={Navbar} />
+        </Switch>
+      </Router>
     </SimpleBar>
   )
 }

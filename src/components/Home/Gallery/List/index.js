@@ -1,4 +1,8 @@
-export const COMPONENTS = [
+import React from 'react'
+
+import Component from './Component'
+
+const components = [
   {
     id: '1af29375-f3a4-4f51-b3db-8ee3ea0ddf24',
     imgAlt: 'navigation navbars',
@@ -62,3 +66,22 @@ export const COMPONENTS = [
     route: '/select-menu'
   }
 ]
+
+const List = () => {
+  return (
+    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {components.map(component => (
+        <Component
+          key={component.id}
+          imgAlt={component.imgAlt}
+          imgUrl={component.imgUrl}
+          isActive={component.isActive}
+          name={component.name}
+          route={component.route}
+        />
+      ))}
+    </ul>
+  )
+}
+
+export default List

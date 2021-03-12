@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Menu from './Menu/Menu'
-import List from './List/List'
+import Menu from './Menu'
+import List from './List'
 
 const Gallery = () => {
   return (
