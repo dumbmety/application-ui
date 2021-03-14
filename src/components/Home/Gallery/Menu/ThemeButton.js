@@ -15,7 +15,7 @@ const ThemeButton = () => {
   return (
     <button
       onClick={handleChangeTheme}
-      className="text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 focus:outline-none flex items-center p-2 rounded-full"
+      className="text-gray-500 mx-0.5 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 focus:outline-none flex items-center p-2 rounded-full"
     >
       {theme === 'light' ? (
         <svg
