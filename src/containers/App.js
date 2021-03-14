@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import SimpleBar from 'simplebar-react'
@@ -15,6 +16,9 @@ const App = () => {
 
   return (
     <SimpleBar className="h-screen">
+      <Helmet>
+        <title>Application UI</title>
+      </Helmet>
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
