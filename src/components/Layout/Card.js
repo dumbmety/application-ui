@@ -1,12 +1,12 @@
 import React from 'react';
 import PropType from 'prop-types';
 
-const Card = ({ children }) => {
+const Card = ({ children, title }) => {
   return (
     <div className="container mx-auto mb-10 overflow-hidden border border-gray-200 rounded-md">
       <header className="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200">
         <div>
-          <h2 className="text-xl">Simple</h2>
+          <h2 className="text-xl">{title}</h2>
         </div>
         <div>
           <button className="px-3 py-1 mx-1 font-semibold text-indigo-800 bg-indigo-100 rounded-md select-none focus:outline-none">
@@ -26,6 +26,7 @@ const Card = ({ children }) => {
 
 Card.propTypes = {
   children: PropType.element,
+  title: PropType.string,
 };
 
 export default Card;

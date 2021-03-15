@@ -2,14 +2,12 @@ import React from 'react';
 
 import Card from '../../../Layout/Card';
 
-const Simple = () => {
+const SimpleDark = () => {
   return (
     <>
-      <Card>
-        <h2>Simple</h2>
-      </Card>
+      <Card title="Simple Dark">Simple Dark</Card>
     </>
   );
 };
 
-export default Simple;
+export default SimpleDark;

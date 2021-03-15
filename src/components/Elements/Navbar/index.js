@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Layout from '../../Layout';
-import Simple from './Simple';
+import SimpleDark from './SimpleDark';
 
 const Navbar = () => {
   return (
     <Layout name="Navbar" route="/navbar">
-      <Simple />
+      <SimpleDark />
     </Layout>
   );
 };
