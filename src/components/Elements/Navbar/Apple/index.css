@@ -1,0 +1,25 @@
+.apple-header {
+  background: rgba(0, 0, 0, 0.8);
+  @apply flex items-center w-full h-12 text-white select-none;
+}
+.apple-desktop-nav {
+  @apply w-full px-3 mx-auto md:px-0 md:w-9/12;
+}
+.apple-desktop-items {
+  @apply items-center justify-between hidden md:flex;
+}
+.apple-desktop-item {
+  @apply transition duration-200 ease-linear opacity-70 hover:opacity-100;
+}
+.apple-mobile-nav {
+  @apply flex items-center justify-between md:hidden;
+}
+.apple-mobile-menu-button {
+  @apply flex items-center transition duration-200 ease-linear opacity-70 hover:opacity-100;
+}
+.apple-mobile-menu-button button {
+  @apply focus:outline-none;
+}
+.apple-mobile-item {
+  @apply transition duration-200 ease-linear opacity-70 hover:opacity-100;
+}
