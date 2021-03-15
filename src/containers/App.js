@@ -14,14 +14,18 @@ import changeTheme from '../helpers/changeTheme'
 
 const App = () => {
   const [components, setComponents] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     changeTheme()
 
     axios
       .get('/components.json')
-      .then(({ data }) => setComponents(Object.values(data)))
-      .catch(err => console.log(err))
+      .then(({ data }) => {
+        setIsLoading(false)
+        setComponents(Object.values(data))
+      })
+      .catch(() => setIsLoading(false))
   }, [])
 
   return (
@@ -31,7 +35,11 @@ const App = () => {
       </Helmet>
       <Router>
         <Switch>
-          <Route path="/" exact component={() => <Home data={components} />} />
+          <Route
+            path="/"
+            exact
+            component={() => <Home data={components} loading={isLoading} />}
+          />
           <Route path="/navbar" component={Navbar} />
           <Route component={NotFound} />
         </Switch>
