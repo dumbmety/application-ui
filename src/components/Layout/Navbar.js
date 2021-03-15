@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ name, route }) => {
   return (
     <header className="py-2 bg-white shadow-sm">
-      <div className="container relative flex items-center mx-auto">
+      <div className="relative flex items-center px-6 mx-auto">
         <Link to="/" className="absolute">
           <svg
             className="w-5 h-5 text-gray-500 transition duration-100 ease-linear hover:text-gray-700"
