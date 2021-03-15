@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
+import emptyImage from '../../../../images/empty-component.svg'
+
 const Component = ({ imgAlt, imgUrl, isActive, name, route }) => {
   const wrapperClasses = isActive
     ? 'shadow-sm dark:shadow-none border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white'
@@ -15,11 +17,13 @@ const Component = ({ imgAlt, imgUrl, isActive, name, route }) => {
         <figure>
           <img
             className="w-full border-b border-gray-200 dark:border-gray-800"
-            src={imgUrl}
+            src={imgUrl ? imgUrl : emptyImage}
             alt={imgAlt}
           />
         </figure>
-        <figcaption className="px-4 py-2">{name}</figcaption>
+        <figcaption className="px-4 py-2" style={{ minHeight: '39px' }}>
+          {name}
+        </figcaption>
       </Link>
     </li>
   )
