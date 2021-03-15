@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -9,10 +9,20 @@ import Home from '../components/Home'
 import NotFound from '../components/Home/NotFound'
 import Navbar from '../components/Elements/Navbar'
 
+import axios from '../config/axiosComponents'
 import changeTheme from '../helpers/changeTheme'
 
 const App = () => {
-  useEffect(() => changeTheme(), [])
+  const [components, setComponents] = useState([])
+
+  useEffect(() => {
+    changeTheme()
+
+    axios
+      .get('/components.json')
+      .then(({ data }) => setComponents(Object.values(data)))
+      .catch(err => console.log(err))
+  }, [])
 
   return (
     <SimpleBar className="h-screen">
@@ -21,7 +31,7 @@ const App = () => {
       </Helmet>
       <Router>
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={() => <Home data={components} />} />
           <Route path="/navbar" component={Navbar} />
           <Route component={NotFound} />
         </Switch>
