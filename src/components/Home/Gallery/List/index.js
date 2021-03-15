@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Component from './Component'
+import Component from './Component';
 
 const List = ({ data, isLoading }) => {
   let loading = (
@@ -14,7 +14,7 @@ const List = ({ data, isLoading }) => {
       <Component />
       <Component />
     </>
-  )
+  );
 
   if (!isLoading) {
     loading = data.map(component => (
@@ -26,19 +26,19 @@ const List = ({ data, isLoading }) => {
         name={component.name}
         route={component.route}
       />
-    ))
+    ));
   }
 
   return (
     <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {loading}
     </ul>
-  )
-}
+  );
+};
 
 List.propTypes = {
   data: PropTypes.array,
-  isLoading: PropTypes.bool
-}
+  isLoading: PropTypes.bool,
+};
 
-export default List
+export default List;

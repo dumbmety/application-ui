@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import FeedbackButton from './FeedbackButton'
-import ThemeButton from './ThemeButton'
-import SourceLink from './SourceLink'
-import EmailButton from './EmailButton'
+import FeedbackButton from './FeedbackButton';
+import ThemeButton from './ThemeButton';
+import SourceLink from './SourceLink';
+import EmailButton from './EmailButton';
 
 const Menu = () => {
   return (
@@ -15,7 +15,7 @@ const Menu = () => {
         <SourceLink />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

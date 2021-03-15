@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import changeTheme from '../../../../helpers/changeTheme'
+import changeTheme from '../../../../helpers/changeTheme';
 
 const ThemeButton = () => {
-  const [theme, setTheme] = useState(localStorage.theme || 'light')
+  const [theme, setTheme] = useState(localStorage.theme || 'light');
 
   const handleChangeTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
 
-  localStorage.theme = theme
-  changeTheme()
+  localStorage.theme = theme;
+  changeTheme();
 
   return (
     <button
@@ -49,7 +49,7 @@ const ThemeButton = () => {
         </svg>
       )}
     </button>
-  )
-}
+  );
+};
 
-export default ThemeButton
+export default ThemeButton;

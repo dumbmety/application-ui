@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const EmailButton = () => {
   return (
@@ -21,7 +21,7 @@ const EmailButton = () => {
         />
       </svg>
     </a>
-  )
-}
+  );
+};
 
-export default EmailButton
+export default EmailButton;

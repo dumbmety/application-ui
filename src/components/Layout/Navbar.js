@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ name, route }) => {
   return (
@@ -27,12 +27,12 @@ const Navbar = ({ name, route }) => {
         </Link>
       </div>
     </header>
-  )
-}
+  );
+};
 
 Navbar.propTypes = {
   name: PropTypes.string,
-  route: PropTypes.string
-}
+  route: PropTypes.string,
+};
 
-export default Navbar
+export default Navbar;

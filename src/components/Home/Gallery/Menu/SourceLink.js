@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const SourceLink = () => {
   return (
@@ -23,7 +23,7 @@ const SourceLink = () => {
         />
       </svg>
     </a>
-  )
-}
+  );
+};
 
-export default SourceLink
+export default SourceLink;

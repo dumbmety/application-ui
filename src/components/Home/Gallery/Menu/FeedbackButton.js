@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const FeedbackButton = () => {
   return (
@@ -22,7 +22,7 @@ const FeedbackButton = () => {
       </svg>
       Send feedback
     </button>
-  )
-}
+  );
+};
 
-export default FeedbackButton
+export default FeedbackButton;

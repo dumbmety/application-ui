@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-import emptyImage from '../../../../images/empty-component.svg'
+import emptyImage from '../../../../images/empty-component.svg';
 
 const Component = ({ imgAlt, imgUrl, isActive, name, route }) => {
   const wrapperClasses = isActive
     ? 'shadow-sm dark:shadow-none border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white'
-    : 'border border-dashed border-gray-300 dark:border-gray-700 opacity-75 cursor-not-allowed'
+    : 'border border-dashed border-gray-300 dark:border-gray-700 opacity-75 cursor-not-allowed';
 
   return (
     <li
@@ -26,15 +26,15 @@ const Component = ({ imgAlt, imgUrl, isActive, name, route }) => {
         </figcaption>
       </Link>
     </li>
-  )
-}
+  );
+};
 
 Component.propTypes = {
   imgAlt: PropTypes.string,
   imgUrl: PropTypes.string,
   isActive: PropTypes.bool,
   name: PropTypes.string,
-  route: PropTypes.string
-}
+  route: PropTypes.string,
+};
 
-export default Component
+export default Component;

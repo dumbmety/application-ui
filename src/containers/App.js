@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import { Helmet } from 'react-helmet'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import SimpleBar from 'simplebar-react'
-import 'simplebar/dist/simplebar.min.css'
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
 
-import Home from '../components/Home'
-import NotFound from '../components/Home/NotFound'
-import Navbar from '../components/Elements/Navbar'
+import Home from '../components/Home';
+import NotFound from '../components/Home/NotFound';
+import Navbar from '../components/Elements/Navbar';
 
-import axios from '../config/axiosComponents'
-import changeTheme from '../helpers/changeTheme'
+import axios from '../config/axiosComponents';
+import changeTheme from '../helpers/changeTheme';
 
 const App = () => {
-  const [components, setComponents] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
+  const [components, setComponents] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    changeTheme()
+    changeTheme();
 
     axios
       .get('/components.json')
       .then(({ data }) => {
-        setIsLoading(false)
-        setComponents(Object.values(data))
+        setIsLoading(false);
+        setComponents(Object.values(data));
       })
-      .catch(() => setIsLoading(false))
-  }, [])
+      .catch(() => setIsLoading(false));
+  }, []);
 
   return (
     <SimpleBar className="h-screen">
@@ -45,7 +45,7 @@ const App = () => {
         </Switch>
       </Router>
     </SimpleBar>
-  )
-}
+  );
+};
 
-export default App
+export default App;

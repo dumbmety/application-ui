@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Menu from './Menu'
-import List from './List'
+import Menu from './Menu';
+import List from './List';
 
 const Gallery = ({ data, loading }) => {
   return (
@@ -11,12 +11,12 @@ const Gallery = ({ data, loading }) => {
       <hr className="my-3 dark:border-gray-700" />
       <List data={data} isLoading={loading} />
     </main>
-  )
-}
+  );
+};
 
 Gallery.propTypes = {
   data: PropTypes.array,
-  loading: PropTypes.bool
-}
+  loading: PropTypes.bool,
+};
 
-export default Gallery
+export default Gallery;

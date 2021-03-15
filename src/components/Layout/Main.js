@@ -1,19 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Main = ({ children }) => {
-  return (
-    <main
-      className="flex items-center justify-center w-full"
-      style={{ height: 'calc(100vh - 43.75px)' }}
-    >
-      {children}
-    </main>
-  )
-}
+  return <main className="w-full py-16">{children}</main>;
+};
 
 Main.propTypes = {
-  children: PropTypes.element
-}
+  children: PropTypes.element,
+};
 
-export default Main
+export default Main;

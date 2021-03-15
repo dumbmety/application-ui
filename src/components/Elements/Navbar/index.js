@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../../Layout'
+import Layout from '../../Layout';
+import Simple from './Simple';
 
 const Navbar = () => {
   return (
     <Layout name="Navbar" route="/navbar">
-      <h1>Navbar</h1>
+      <Simple />
     </Layout>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
