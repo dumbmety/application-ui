@@ -9,6 +9,7 @@ import Home from '../components/Home';
 import NotFound from '../components/Home/NotFound';
 import Navbar from '../components/Elements/Navbar';
 import AppleNavbar from '../components/Elements/Navbar/Apple/AppleNavbar';
+import MicrosoftNavbar from '../components/Elements/Navbar/Microsoft/MicrosoftNavbar';
 
 import axios from '../config/axiosComponents';
 import changeTheme from '../helpers/changeTheme';
@@ -36,6 +37,7 @@ const App = () => {
       </Helmet>
       <Router>
         <Switch>
+          <Route path="/navbar/microsoft" component={MicrosoftNavbar} />
           <Route path="/navbar/apple" component={AppleNavbar} />
           <Route path="/navbar" component={Navbar} />
           <Route

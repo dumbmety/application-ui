@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import './index.css';
-import AppleNavbar from './AppleNavbar';
+import MicrosoftNavbar from './MicrosoftNavbar';
 import Card from '../../../Layout/Card';
 
-const Apple = () => {
+const Microsoft = () => {
   const [size, setSize] = useState('desktop');
 
   const handleDesktopSize = () => setSize('desktop');
@@ -13,16 +13,16 @@ const Apple = () => {
 
   return (
     <Card
-      title="Apple"
-      route="apple"
+      title="Microsoft"
+      route="microsoft"
       size={size}
       desktop={handleDesktopSize}
       tablet={handleTabletSize}
       mobile={handleMobilepSize}
     >
-      <AppleNavbar />
+      <MicrosoftNavbar />
     </Card>
   );
 };
 
-export default Apple;
+export default Microsoft;

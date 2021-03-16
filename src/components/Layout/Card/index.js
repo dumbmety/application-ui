@@ -8,7 +8,7 @@ import {
 
 import './index.css';
 
-const Card = ({ children, title, size, desktop, tablet, mobile }) => {
+const Card = ({ children, title, route, size, desktop, tablet, mobile }) => {
   let boxContentWidth;
   switch (size) {
     case 'desktop':
@@ -61,7 +61,11 @@ const Card = ({ children, title, size, desktop, tablet, mobile }) => {
           </div>
         </header>
         <div className="box-content">
-          <iframe src="/navbar/apple" title={title} className={boxContentWidth}>
+          <iframe
+            src={`/navbar/${route}`}
+            title={title}
+            className={boxContentWidth}
+          >
             {children}
           </iframe>
         </div>
@@ -73,6 +77,7 @@ const Card = ({ children, title, size, desktop, tablet, mobile }) => {
 Card.propTypes = {
   children: PropType.element,
   title: PropType.string,
+  route: PropType.string,
   size: PropType.string,
   desktop: PropType.func,
   tablet: PropType.func,
