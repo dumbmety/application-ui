@@ -36,13 +36,13 @@ const App = () => {
       </Helmet>
       <Router>
         <Switch>
+          <Route path="/navbar/apple" component={AppleNavbar} />
+          <Route path="/navbar" component={Navbar} />
           <Route
             path="/"
             exact
             component={() => <Home data={components} loading={isLoading} />}
           />
-          <Route path="/navbar" exact component={Navbar} />
-          <Route path="/navbar/apple" exact component={AppleNavbar} />
           <Route component={NotFound} />
         </Switch>
       </Router>
