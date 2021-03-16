@@ -9,44 +9,58 @@ import {
 import './index.css';
 
 const Card = ({ children, title, size, desktop, tablet, mobile }) => {
+  let boxContentWidth;
+  switch (size) {
+    case 'desktop':
+      boxContentWidth = 'w-full';
+      break;
+    case 'tablet':
+      boxContentWidth = 'w-full md:w-6/12';
+      break;
+    case 'mobile':
+      boxContentWidth = 'w-full sm:w-6/12 md:w-4/12';
+  }
+
   return (
-    <section className="container px-5 mb-10 sm:mx-auto sm:px-0">
-      <div className="overflow-hidden border border-gray-200 rounded-md">
-        <header className="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200">
+    <section className="box">
+      <div className="box-wrapper">
+        <header className="box-info">
           <div>
-            <h2 className="text-xl">{title}</h2>
+            <h2 className="box-info__title">{title}</h2>
           </div>
           <div>
             <button
               onClick={mobile}
-              className={`p-2 mx-1 font-semibold transition duration-75 ease-linear ${
+              className={`box-info__button ${
                 size === 'mobile' ? 'text-white bg-indigo-500' : 'text-gray-600'
-              } rounded-md select-none focus:outline-none`}
+              }`}
             >
               <HiOutlineDeviceMobile size="1.2rem" />
             </button>
             <button
               onClick={tablet}
-              className={`p-2 mx-1 font-semibold transition duration-75 ease-linear ${
+              className={`box-info__button ${
                 size === 'tablet' ? 'text-white bg-indigo-500' : 'text-gray-600'
-              } rounded-md select-none focus:outline-none`}
+              }`}
             >
               <HiOutlineDeviceTablet size="1.2rem" />
             </button>
             <button
               onClick={desktop}
-              className={`p-2 mx-1 font-semibold transition duration-75 ease-linear ${
+              className={`box-info__button ${
                 size === 'desktop'
                   ? 'text-white bg-indigo-500'
                   : 'text-gray-600'
-              } rounded-md select-none focus:outline-none`}
+              }`}
             >
               <HiOutlineDesktopComputer size="1.2rem" />
             </button>
           </div>
         </header>
-        <div className="bg-gray-100" style={{ minHeight: '80px' }}>
-          {children}
+        <div className="box-content">
+          <iframe src="/navbar/apple" className={boxContentWidth}>
+            {children}
+          </iframe>
         </div>
       </div>
     </section>

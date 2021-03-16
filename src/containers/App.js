@@ -8,6 +8,7 @@ import 'simplebar/dist/simplebar.min.css';
 import Home from '../components/Home';
 import NotFound from '../components/Home/NotFound';
 import Navbar from '../components/Elements/Navbar';
+import AppleNavbar from '../components/Elements/Navbar/Apple/AppleNavbar';
 
 import axios from '../config/axiosComponents';
 import changeTheme from '../helpers/changeTheme';
@@ -40,7 +41,8 @@ const App = () => {
             exact
             component={() => <Home data={components} loading={isLoading} />}
           />
-          <Route path="/navbar" component={Navbar} />
+          <Route path="/navbar" exact component={Navbar} />
+          <Route path="/navbar/apple" exact component={AppleNavbar} />
           <Route component={NotFound} />
         </Switch>
       </Router>

@@ -1,0 +1,19 @@
+.box {
+  @apply container px-5 my-5 sm:mx-auto sm:px-0;
+}
+.box-wrapper {
+  @apply overflow-hidden border border-gray-200 rounded-md;
+}
+.box-info {
+  @apply flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200;
+}
+.box-info__title {
+  @apply text-xl;
+}
+.box-info__button {
+  @apply p-2 mx-1 font-semibold transition duration-75 ease-linear rounded-md select-none focus:outline-none;
+}
+.box-content {
+  @apply bg-gray-100 h-full;
+  min-height: 80px;
+}
