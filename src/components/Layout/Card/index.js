@@ -19,6 +19,9 @@ const Card = ({ children, title, size, desktop, tablet, mobile }) => {
       break;
     case 'mobile':
       boxContentWidth = 'w-full sm:w-6/12 md:w-4/12';
+      break;
+    default:
+      boxContentWidth = 'w-full';
   }
 
   return (
@@ -58,7 +61,7 @@ const Card = ({ children, title, size, desktop, tablet, mobile }) => {
           </div>
         </header>
         <div className="box-content">
-          <iframe src="/navbar/apple" className={boxContentWidth}>
+          <iframe src="/navbar/apple" title={title} className={boxContentWidth}>
             {children}
           </iframe>
         </div>
