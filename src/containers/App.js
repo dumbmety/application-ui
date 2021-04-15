@@ -12,15 +12,12 @@ import AppleNavbar from '../components/Elements/Navbar/Apple/AppleNavbar';
 import MicrosoftNavbar from '../components/Elements/Navbar/Microsoft/MicrosoftNavbar';
 
 import axios from '../config/axiosComponents';
-import changeTheme from '../helpers/changeTheme';
 
 const App = () => {
   const [components, setComponents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    changeTheme();
-
     axios
       .get('/components.json')
       .then(({ data }) => {

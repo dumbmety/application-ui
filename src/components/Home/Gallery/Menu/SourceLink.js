@@ -6,7 +6,7 @@ const SourceLink = () => {
       href="https://github.com/neysidev/application-ui"
       target="_blank"
       rel="noreferrer"
-      className="flex items-center p-2 mx-0.5 text-gray-500 rounded-full dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 focus:outline-none"
+      className="flex items-center p-2 mx-0.5 text-gray-500 rounded-full hover:text-gray-400 focus:outline-none"
     >
       <svg
         className="w-5 h-5"

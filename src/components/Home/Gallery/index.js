@@ -8,7 +8,7 @@ const Gallery = ({ data, loading }) => {
   return (
     <main className="py-3 mx-5 my-8">
       <Menu />
-      <hr className="my-3 dark:border-gray-700" />
+      <hr className="my-3 border-gray-600" />
       <List data={data} isLoading={loading} />
     </main>
   );
