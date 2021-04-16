@@ -1,6 +1,4 @@
-import React from 'react';
-
-const EmailButton = () => {
+export default function EmailButton() {
   return (
     <a
       href="mailto:dev.mehdineysi@gmail.com"
@@ -22,6 +20,4 @@ const EmailButton = () => {
       </svg>
     </a>
   );
-};
-
-export default EmailButton;
+}

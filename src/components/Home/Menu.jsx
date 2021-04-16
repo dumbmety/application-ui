@@ -1,10 +1,8 @@
-import React from 'react';
-
 import FeedbackButton from './FeedbackButton';
 import SourceLink from './SourceLink';
 import EmailButton from './EmailButton';
 
-const Menu = () => {
+export default function Menu() {
   return (
     <header className="flex items-center justify-between">
       <FeedbackButton />
@@ -14,6 +12,4 @@ const Menu = () => {
       </div>
     </header>
   );
-};
-
-export default Menu;
+}

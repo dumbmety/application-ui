@@ -1,6 +1,4 @@
-import React from 'react';
-
-const SourceLink = () => {
+export default function SourceLink() {
   return (
     <a
       href="https://github.com/neysidev/application-ui"
@@ -24,6 +22,4 @@ const SourceLink = () => {
       </svg>
     </a>
   );
-};
-
-export default SourceLink;
+}

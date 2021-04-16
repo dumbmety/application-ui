@@ -1,6 +1,4 @@
-import React from 'react';
-
-const FeedbackButton = () => {
+export default function FeedbackButton() {
   return (
     <button
       disabled
@@ -23,6 +21,4 @@ const FeedbackButton = () => {
       Send feedback
     </button>
   );
-};
-
-export default FeedbackButton;
+}

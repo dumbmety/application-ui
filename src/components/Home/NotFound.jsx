@@ -1,10 +1,9 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
-import Image from '../../../images/not-found.svg';
+import Image from '../../images/not-found.svg';
 
-const NotFound = () => {
+export default function NotFound() {
   return (
     <>
       <Helmet>
@@ -21,6 +20,4 @@ const NotFound = () => {
       </main>
     </>
   );
-};
-
-export default NotFound;
+}

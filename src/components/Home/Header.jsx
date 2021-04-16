@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Header = () => {
+export default function Header() {
   return (
     <header className="py-1 mx-5 text-white">
       <h1 className="py-3 text-5xl font-bold">Application UI</h1>
@@ -18,6 +16,4 @@ const Header = () => {
       </p>
     </header>
   );
-};
-
-export default Header;
+}
