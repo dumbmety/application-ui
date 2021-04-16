@@ -7,7 +7,7 @@ export default function List() {
   return (
     <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {components.map(component => (
-        <li className="text-white cursor-pointer">
+        <li key={component.id} className="text-white cursor-pointer">
           <Link to={component.route}>
             <figure>
               <img
