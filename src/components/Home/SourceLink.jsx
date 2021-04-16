@@ -4,7 +4,7 @@ export default function SourceLink() {
       href="https://github.com/neysidev/application-ui"
       target="_blank"
       rel="noreferrer"
-      className="flex items-center p-2 mx-0.5 text-gray-500 rounded-full hover:text-gray-400 focus:outline-none"
+      className="flex items-center p-2 mx-0.5 text-black-300 rounded-full hover:text-white focus:outline-none"
     >
       <svg
         className="w-5 h-5"

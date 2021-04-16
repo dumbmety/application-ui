@@ -4,7 +4,7 @@ import EmailButton from './EmailButton';
 
 export default function Menu() {
   return (
-    <header className="flex items-center justify-between">
+    <header className="flex items-center justify-between mb-3">
       <FeedbackButton />
       <div className="flex items-center">
         <EmailButton />
